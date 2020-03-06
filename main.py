@@ -33,8 +33,7 @@ if __name__ == "__main__":
 
 	command = sys.argv[1]
 	instance_ids = []
-	sess = boto3.Session(profile_name='dev-sandbox')
-	client = sess.client('ec2')
+	client = boto3.client('ec2')
 
 	if(command == "sleep"):
 
