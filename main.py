@@ -43,6 +43,7 @@ if __name__ == "__main__":
 			for ec2 in ec2s["Reservations"][i]["Instances"]:
 				instance_ids.append(ec2["InstanceId"])
 
+		print("instance_ids: ", instance_ids)
 		res = stop_instances(client, instance_ids)
 		print(res)
 
